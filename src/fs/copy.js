@@ -40,4 +40,4 @@ const copyEntities = async (sourceFolder, copyFolder) => {
   });
 };
 
-copy();
+await copy();

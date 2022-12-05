@@ -5,7 +5,7 @@ import { getDirPath } from '../shared/index.js';
 
 const ARGUMENTS = ['Bradley Cooper', 'Jennifer Lawrence', 'Rami Malek'];
 
-const spawnChildProcess = async (args = ARGUMENTS) => {
+const spawnChildProcess = async (args) => {
   const __dirname = getDirPath(import.meta.url);
   const path = join(__dirname, 'files/script.js');
   const { stdin, stdout } = process;
@@ -16,4 +16,5 @@ const spawnChildProcess = async (args = ARGUMENTS) => {
   stdin.pipe(childProcess.stdin);
 };
 
-spawnChildProcess();
+// Put your arguments in function call to test this functionality
+spawnChildProcess(ARGUMENTS);
